@@ -1,32 +1,78 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Anton', sans-serif;
+}
+#drum-machine{
+    background-size: cover;
+    background: url("https://steamuserimages-a.akamaihd.net/ugc/842584665872569451/DA2CD925BFFD14AF304889883503C2FA95DEFA14/") center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.main{
+    width: 50%;
+    margin: 0 auto;
+}
+.drum-pads{
+    display: flex;
+    width: 50%;
+    /* flex-direction: row; */
+    -webkit-transition: all .07s ease;
+    transition: all .07s ease;
+    margin: 0 auto;
+    border: 5px solid gray;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.drum-pad{
+    font-size: xx-large;
+    color: #ffffff;
+    border: 2px solid lightgrey;
+    padding: 14px 43px;
+    border-radius: 10px;
+    margin: .5rem;
+    background: grey;
+
+}
+.playing{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+#display{
+    color: #ffffff;
+    padding: 10px 20px;
+    /* padding: 10px 20px; */
+    width: 17%;
+    text-align: center;
+    background: grey;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
+@media screen and (max-width: 992px) {
+    .drum-pads{
+        width: 100%;
+    }
+    #display{
+        width: 100%;
+    }
+    .drum-pad{
+        font-size: 16px;
+        color: #ffffff;
+        border: 2px solid whitesmoke;
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin: .5rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    }
 }
